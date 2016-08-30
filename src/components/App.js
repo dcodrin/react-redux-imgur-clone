@@ -1,14 +1,21 @@
 import React from 'react';
 
 import MainNav from 'MainNav';
-import Images from 'Images';
+import TopicList from 'TopicList';
 class App extends React.Component {
     render() {
+
+        const renderContent = () => {
+            if(this.props.children) {
+                return this.props.children;
+            }
+            return <TopicList />;
+        };
+
         return (
             <div>
                 <MainNav />
-                <Images/>
-                {this.props.children}
+                {renderContent()}
             </div>
         );
     }

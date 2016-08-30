@@ -6,7 +6,7 @@ module.exports = {
         //load scripts before App.jsx, make use of the script-loader through 'script!'
         'script!jquery/dist/jquery.min.js',
         'script!foundation-sites/dist/foundation.min.js',
-        './src/app.js'
+        'src/app.js'
     ],
     externals: {
         //make jquery available globally through the var 'jQuery'

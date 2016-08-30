@@ -7,10 +7,8 @@ class MainNav extends React.Component {
             <div className="top-bar">
                 <div className="top-bar-left">
                     <ul className="menu">
-                        <li className="menu-text"><IndexLink to="/public" activeClassName="active-nav-link">Imgur Clone</IndexLink></li>
-                        <li><Link to="/public/one" activeClassName="active-nav-link">One</Link></li>
-                        <li><Link to="/public/two" activeClassName="active-nav-link">Two</Link></li>
-                        <li><Link to="/public/three" activeClassName="active-nav-link">Three</Link></li>
+                        <li className="menu-text">Imgur Clone</li>
+                        <li><Link to="/public/" activeClassName='active-nav-link'>Topics</Link></li>
                     </ul>
                 </div>
                 <div className="top-bar-right">

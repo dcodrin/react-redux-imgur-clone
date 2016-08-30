@@ -18,6 +18,4 @@ $(document).foundation();
 const store = configureStore();
 
 
-
-
 ReactDOM.render(routes(store), document.querySelector('#app'));

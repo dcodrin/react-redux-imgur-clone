@@ -1,8 +1,20 @@
+import * as types from '../actions/types';
+
+export const topicsReducer = (state = [], action) => {
+    switch (action.type) {
+        case types.ADD_TOPICS:
+            return [
+                ...action.topics
+            ];
+        default:
+            return state;
+    }
+};
+
 export const imagesReducer = (state = [], action) => {
     switch (action.type) {
-        case 'ADD_IMAGES':
+        case types.ADD_IMAGES:
             return [
-                ...state,
                 ...action.images
             ];
         default:
