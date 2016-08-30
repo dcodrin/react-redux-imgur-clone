@@ -1,0 +1,7 @@
+//Active Nav Link
+
+$active-nav-link: $primary-color;
+
+.active-nav-link {
+  color: darken($active-nav-link, 10%);
+}
