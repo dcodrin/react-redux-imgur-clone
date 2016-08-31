@@ -11,14 +11,6 @@ class MainNav extends React.Component {
                         <li><Link to="/" activeClassName='active-nav-link'>Topics</Link></li>
                     </ul>
                 </div>
-                <div className="top-bar-right">
-                    <ul className="menu">
-                        <li><input type="search" placeholder="Search"/></li>
-                        <li>
-                            <button type="button" className="button">Search</button>
-                        </li>
-                    </ul>
-                </div>
             </div>
         );
     }
