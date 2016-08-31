@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class ImagePreview extends React.Component {
     constructor() {
@@ -19,7 +20,7 @@ class ImagePreview extends React.Component {
     handleMouseLeave() {
         this.setState({
             hovering: false
-        })
+        });
     }
 
     render() {
@@ -43,15 +44,27 @@ class ImagePreview extends React.Component {
             );
         };
 
+        const renderInset = () => {
+            return(
+                <div className="inset">
+                    Views: {this.props.views}
+                    <br/>
+                    Upvotes: {this.props.ups}
+                </div>
+            );
+        };
+
         return (
-            <div
+            <Link
                 className="image-preview"
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
+                to={`/images/${this.props.id}`}
             >
                 {this.props.animated && this.state.hovering ? renderVideo() :renderImage()}
                 {this.props.animated && !this.state.hovering ? renderPlayIcon() : null}
-            </div>
+                {this.state.hovering ? renderInset() : null}
+            </Link>
         );
     }
 }

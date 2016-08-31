@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 import {startGetImages} from 'actions';
 import ImagePreview from 'ImagePreview';
+
 class Topic extends React.Component {
     componentWillMount() {
         const {dispatch} = this.props;
@@ -10,7 +11,6 @@ class Topic extends React.Component {
     }
 
     render() {
-        console.log(this.props.images);
         const renderContent = () => {
             if(this.props.images) {
                 return (

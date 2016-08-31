@@ -7,8 +7,11 @@ import {startGetTopics} from 'actions';
 class TopicList extends React.Component {
 
     componentWillMount() {
-        const {dispatch} = this.props;
-        dispatch(startGetTopics());
+
+        if (this.props.topics.length === 0) {
+            const {dispatch} = this.props;
+            dispatch(startGetTopics());
+        }
     }
 
     render() {
@@ -18,7 +21,7 @@ class TopicList extends React.Component {
                     this.props.topics.map(topic => {
                         return (
                             <div className="callout" key={topic.id}>
-                                <Link to={`/public/topics/${topic.id}`}>
+                                <Link to={`/topics/${topic.id}`}>
                                     <h4>{topic.name}</h4>
                                     <p>{topic.description}</p>
                                 </Link>
