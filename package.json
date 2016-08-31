@@ -6,7 +6,7 @@
   "scripts": {
     "test": "karma start",
     "dev-server": "webpack-dev-server --hot --inline --progress",
-    "deploy": "webpack && git add ./public/bundle.js ./public/bundle.js.map && git commit -am 'Generated production bundle.js' && git push heroku master",
+    "deploy": "webpack && git add -f ./public/bundle.js ./public/bundle.js.map && git commit -am 'Generated production bundle.js' && git push heroku master",
     "start": "node server.js"
   },
   "keywords": [
